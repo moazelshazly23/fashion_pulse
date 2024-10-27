@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Pulse</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* هنا يمكنك إضافة أنماط CSS إضافية إذا لزم الأمر */
+        .bg-brown-900 { background-color: #6D4C41; }
+        .bg-brown-600 { background-color: #8D6E63; }
+        .bg-brown-800 { background-color: #4E342E; }
+        .text-brown-900 { color: #6D4C41; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-black via-brown-900 to-white min-h-screen flex items-center justify-center">
+    <!-- صفحة تسجيل الدخول -->
+    <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center mb-6 text-brown-900">Fashion Pulse</h1>
+        <form class="space-y-6">
+            <div class="flex justify-center space-x-4 mb-4">
+                <div class="flex items-center space-x-2">
+                    <input type="radio" name="loginMethod" value="email" id="email" checked />
+                    <label htmlFor="email">البريد الإلكتروني</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" name="loginMethod" value="phone" id="phone" />
+                    <label htmlFor="phone">رقم الهاتف</label>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label htmlFor="loginId">البريد الإلكتروني</label>
+                <input id="loginId" type="email" placeholder="أدخل بريدك الإلكتروني" class="border p-2 w-full" />
+            </div>
+
+            <div class="space-y-2">
+                <label htmlFor="password">كلمة المرور</label>
+                <input id="password" type="password" placeholder="أدخل كلمة المرور" class="border p-2 w-full" />
+            </div>
+
+            <button type="submit" class="w-full bg-brown-600 hover:bg-brown-700 text-white p-2">تسجيل الدخول</button>
+            <div class="text-center">
+                <a href="#" class="text-sm text-brown-600 hover:underline">ليس لديك حساب؟ إنشاء حساب جديد</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- إضافة المنتجات -->
+    <div class="min-h-screen bg-gradient-to-br from-black via-brown-900 to-white p-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-6">
+            <h1 class="text-3xl font-bold mb-6 text-center text-brown-800">لوحة تحكم المسؤول - Fashion Pulse</h1>
+            <button class="mb-4 bg-brown-600 hover:bg-brown-700 text-white p-2">إضافة منتج جديد</button>
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">الصورة</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">اسم المنتج</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">السعر (جنيه)</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">سعر الخصم (جنيه)</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">الألوان المتاحة</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- يمكن تكرار هذا الجزء لكل منتج -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <img src="/placeholder.svg" alt="قميص كلاسيكي" class="w-16 h-16 object-cover rounded" />
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">قميص كلاسيكي</td>
+                        <td class="px-6 py-4 whitespace-nowrap">499.99 ج.م</td>
+                        <td class="px-6 py-4 whitespace-nowrap">399.99 ج.م</td>
+                        <td class="px-6 py-4 whitespace-nowrap">أبيض، أسود، أزرق</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right">
+                            <button class="text-blue-600 hover:text-blue-900">تعديل</button>
+                            <button class="text-red-600 hover:text-red-900">حذف</button>
+                        </td>
+                    </tr>
+                    <!-- نهاية تكرار المنتج -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
